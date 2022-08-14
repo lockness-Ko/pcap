@@ -22259,7 +22259,7 @@
             </div>
             <div class="column has-background-white p-0"
                  role="cell">
-                <pre class="has-background-white py-0 px-2">pub struct BpfInstruction(raw::bpf_insn);</pre>
+                <pre class="has-background-white py-0 px-2">#[repr(transparent)]</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22275,7 +22275,7 @@
             </div>
             <div class="column has-background-white p-0"
                  role="cell">
-                <pre class="has-background-white py-0 px-2">pub struct BpfProgram(raw::bpf_program);</pre>
+                <pre class="has-background-white py-0 px-2">pub struct BpfInstruction(raw::bpf_insn);</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22291,7 +22291,7 @@
             </div>
             <div class="column has-background-white p-0"
                  role="cell">
-                <pre class="has-background-white py-0 px-2"></pre>
+                <pre class="has-background-white py-0 px-2">#[repr(transparent)]</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22307,7 +22307,7 @@
             </div>
             <div class="column has-background-white p-0"
                  role="cell">
-                <pre class="has-background-white py-0 px-2">impl BpfProgram {</pre>
+                <pre class="has-background-white py-0 px-2">pub struct BpfProgram(raw::bpf_program);</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22323,7 +22323,7 @@
             </div>
             <div class="column has-background-white p-0"
                  role="cell">
-                <pre class="has-background-white py-0 px-2">    &#x2F;&#x2F;&#x2F; checks whether a filter matches a packet</pre>
+                <pre class="has-background-white py-0 px-2"></pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22333,13 +22333,13 @@
                 <a href="#1394">1394</a>
             </div>
             <div
-                class="column is-1 is-narrow p-0 has-text-centered has-text-success-light has-background-success"
-                role="cell" aria-label="38">
-                38
+                class="column is-1 is-narrow p-0 has-text-centered has-text-white has-background-white"
+                role="cell" aria-label="no coverage">
+                
             </div>
-            <div class="column has-background-success-light p-0"
+            <div class="column has-background-white p-0"
                  role="cell">
-                <pre class="has-background-success-light py-0 px-2">    pub fn filter(&amp;self, buf: &amp;[u8]) -&gt; bool {</pre>
+                <pre class="has-background-white py-0 px-2">impl BpfProgram {</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22349,13 +22349,13 @@
                 <a href="#1395">1395</a>
             </div>
             <div
-                class="column is-1 is-narrow p-0 has-text-centered has-text-success-light has-background-success"
-                role="cell" aria-label="38">
-                38
+                class="column is-1 is-narrow p-0 has-text-centered has-text-white has-background-white"
+                role="cell" aria-label="no coverage">
+                
             </div>
-            <div class="column has-background-success-light p-0"
+            <div class="column has-background-white p-0"
                  role="cell">
-                <pre class="has-background-success-light py-0 px-2">        let header: raw::pcap_pkthdr = raw::pcap_pkthdr {</pre>
+                <pre class="has-background-white py-0 px-2">    &#x2F;&#x2F;&#x2F; checks whether a filter matches a packet</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22371,7 +22371,7 @@
             </div>
             <div class="column has-background-success-light p-0"
                  role="cell">
-                <pre class="has-background-success-light py-0 px-2">            ts: libc::timeval {</pre>
+                <pre class="has-background-success-light py-0 px-2">    pub fn filter(&amp;self, buf: &amp;[u8]) -&gt; bool {</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22387,7 +22387,7 @@
             </div>
             <div class="column has-background-success-light p-0"
                  role="cell">
-                <pre class="has-background-success-light py-0 px-2">                tv_sec: 0,</pre>
+                <pre class="has-background-success-light py-0 px-2">        let header: raw::pcap_pkthdr = raw::pcap_pkthdr {</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22403,7 +22403,7 @@
             </div>
             <div class="column has-background-success-light p-0"
                  role="cell">
-                <pre class="has-background-success-light py-0 px-2">                tv_usec: 0,</pre>
+                <pre class="has-background-success-light py-0 px-2">            ts: libc::timeval {</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22419,7 +22419,7 @@
             </div>
             <div class="column has-background-success-light p-0"
                  role="cell">
-                <pre class="has-background-success-light py-0 px-2">            },</pre>
+                <pre class="has-background-success-light py-0 px-2">                tv_sec: 0,</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22435,7 +22435,7 @@
             </div>
             <div class="column has-background-success-light p-0"
                  role="cell">
-                <pre class="has-background-success-light py-0 px-2">            caplen: buf.len() as u32,</pre>
+                <pre class="has-background-success-light py-0 px-2">                tv_usec: 0,</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22451,7 +22451,7 @@
             </div>
             <div class="column has-background-success-light p-0"
                  role="cell">
-                <pre class="has-background-success-light py-0 px-2">            len: buf.len() as u32,</pre>
+                <pre class="has-background-success-light py-0 px-2">            },</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22467,7 +22467,7 @@
             </div>
             <div class="column has-background-success-light p-0"
                  role="cell">
-                <pre class="has-background-success-light py-0 px-2">        };</pre>
+                <pre class="has-background-success-light py-0 px-2">            caplen: buf.len() as u32,</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22483,7 +22483,7 @@
             </div>
             <div class="column has-background-success-light p-0"
                  role="cell">
-                <pre class="has-background-success-light py-0 px-2">        unsafe { raw::pcap_offline_filter(&amp;self.0, &amp;header, buf.as_ptr()) &gt; 0 }</pre>
+                <pre class="has-background-success-light py-0 px-2">            len: buf.len() as u32,</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22499,7 +22499,7 @@
             </div>
             <div class="column has-background-success-light p-0"
                  role="cell">
-                <pre class="has-background-success-light py-0 px-2">    }</pre>
+                <pre class="has-background-success-light py-0 px-2">        };</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22509,13 +22509,13 @@
                 <a href="#1405">1405</a>
             </div>
             <div
-                class="column is-1 is-narrow p-0 has-text-centered has-text-white has-background-white"
-                role="cell" aria-label="no coverage">
-                
+                class="column is-1 is-narrow p-0 has-text-centered has-text-success-light has-background-success"
+                role="cell" aria-label="38">
+                38
             </div>
-            <div class="column has-background-white p-0"
+            <div class="column has-background-success-light p-0"
                  role="cell">
-                <pre class="has-background-white py-0 px-2"></pre>
+                <pre class="has-background-success-light py-0 px-2">        unsafe { raw::pcap_offline_filter(&amp;self.0, &amp;header, buf.as_ptr()) &gt; 0 }</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22526,12 +22526,12 @@
             </div>
             <div
                 class="column is-1 is-narrow p-0 has-text-centered has-text-success-light has-background-success"
-                role="cell" aria-label="76">
-                76
+                role="cell" aria-label="38">
+                38
             </div>
             <div class="column has-background-success-light p-0"
                  role="cell">
-                <pre class="has-background-success-light py-0 px-2">    pub fn get_instructions(&amp;self) -&gt; &amp;[BpfInstruction] {</pre>
+                <pre class="has-background-success-light py-0 px-2">    }</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22541,13 +22541,13 @@
                 <a href="#1407">1407</a>
             </div>
             <div
-                class="column is-1 is-narrow p-0 has-text-centered has-text-success-light has-background-success"
-                role="cell" aria-label="76">
-                76
+                class="column is-1 is-narrow p-0 has-text-centered has-text-white has-background-white"
+                role="cell" aria-label="no coverage">
+                
             </div>
-            <div class="column has-background-success-light p-0"
+            <div class="column has-background-white p-0"
                  role="cell">
-                <pre class="has-background-success-light py-0 px-2">        unsafe {</pre>
+                <pre class="has-background-white py-0 px-2"></pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22563,7 +22563,7 @@
             </div>
             <div class="column has-background-success-light p-0"
                  role="cell">
-                <pre class="has-background-success-light py-0 px-2">            slice::from_raw_parts(</pre>
+                <pre class="has-background-success-light py-0 px-2">    pub fn get_instructions(&amp;self) -&gt; &amp;[BpfInstruction] {</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22579,7 +22579,7 @@
             </div>
             <div class="column has-background-success-light p-0"
                  role="cell">
-                <pre class="has-background-success-light py-0 px-2">                self.0.bf_insns as *const BpfInstruction,</pre>
+                <pre class="has-background-success-light py-0 px-2">        unsafe {</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22595,7 +22595,7 @@
             </div>
             <div class="column has-background-success-light p-0"
                  role="cell">
-                <pre class="has-background-success-light py-0 px-2">                self.0.bf_len as usize,</pre>
+                <pre class="has-background-success-light py-0 px-2">            slice::from_raw_parts(</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22611,7 +22611,7 @@
             </div>
             <div class="column has-background-success-light p-0"
                  role="cell">
-                <pre class="has-background-success-light py-0 px-2">            )</pre>
+                <pre class="has-background-success-light py-0 px-2">                self.0.bf_insns as *const BpfInstruction,</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22627,7 +22627,7 @@
             </div>
             <div class="column has-background-success-light p-0"
                  role="cell">
-                <pre class="has-background-success-light py-0 px-2">        }</pre>
+                <pre class="has-background-success-light py-0 px-2">                self.0.bf_len as usize,</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22643,7 +22643,7 @@
             </div>
             <div class="column has-background-success-light p-0"
                  role="cell">
-                <pre class="has-background-success-light py-0 px-2">    }</pre>
+                <pre class="has-background-success-light py-0 px-2">            )</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22653,13 +22653,13 @@
                 <a href="#1414">1414</a>
             </div>
             <div
-                class="column is-1 is-narrow p-0 has-text-centered has-text-white has-background-white"
-                role="cell" aria-label="no coverage">
-                
+                class="column is-1 is-narrow p-0 has-text-centered has-text-success-light has-background-success"
+                role="cell" aria-label="76">
+                76
             </div>
-            <div class="column has-background-white p-0"
+            <div class="column has-background-success-light p-0"
                  role="cell">
-                <pre class="has-background-white py-0 px-2">}</pre>
+                <pre class="has-background-success-light py-0 px-2">        }</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22669,13 +22669,13 @@
                 <a href="#1415">1415</a>
             </div>
             <div
-                class="column is-1 is-narrow p-0 has-text-centered has-text-white has-background-white"
-                role="cell" aria-label="no coverage">
-                
+                class="column is-1 is-narrow p-0 has-text-centered has-text-success-light has-background-success"
+                role="cell" aria-label="76">
+                76
             </div>
-            <div class="column has-background-white p-0"
+            <div class="column has-background-success-light p-0"
                  role="cell">
-                <pre class="has-background-white py-0 px-2"></pre>
+                <pre class="has-background-success-light py-0 px-2">    }</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22691,7 +22691,7 @@
             </div>
             <div class="column has-background-white p-0"
                  role="cell">
-                <pre class="has-background-white py-0 px-2">impl Clone for BpfProgram {</pre>
+                <pre class="has-background-white py-0 px-2">}</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22707,7 +22707,7 @@
             </div>
             <div class="column has-background-white p-0"
                  role="cell">
-                <pre class="has-background-white py-0 px-2">    &#x2F;&#x2F; make a deep copy of the underlying program</pre>
+                <pre class="has-background-white py-0 px-2"></pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22717,13 +22717,13 @@
                 <a href="#1418">1418</a>
             </div>
             <div
-                class="column is-1 is-narrow p-0 has-text-centered has-text-danger-light has-background-danger"
-                role="cell" aria-label="0">
+                class="column is-1 is-narrow p-0 has-text-centered has-text-white has-background-white"
+                role="cell" aria-label="no coverage">
                 
             </div>
-            <div class="column has-background-danger-light p-0"
+            <div class="column has-background-white p-0"
                  role="cell">
-                <pre class="has-background-danger-light py-0 px-2">    fn clone(&amp;self) -&gt; Self {</pre>
+                <pre class="has-background-white py-0 px-2">impl Clone for BpfProgram {</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22733,13 +22733,13 @@
                 <a href="#1419">1419</a>
             </div>
             <div
-                class="column is-1 is-narrow p-0 has-text-centered has-text-danger-light has-background-danger"
-                role="cell" aria-label="0">
+                class="column is-1 is-narrow p-0 has-text-centered has-text-white has-background-white"
+                role="cell" aria-label="no coverage">
                 
             </div>
-            <div class="column has-background-danger-light p-0"
+            <div class="column has-background-white p-0"
                  role="cell">
-                <pre class="has-background-danger-light py-0 px-2">        let len = self.0.bf_len as usize;</pre>
+                <pre class="has-background-white py-0 px-2">    &#x2F;&#x2F; make a deep copy of the underlying program</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22755,7 +22755,7 @@
             </div>
             <div class="column has-background-danger-light p-0"
                  role="cell">
-                <pre class="has-background-danger-light py-0 px-2">        let size = len * mem::size_of::&lt;raw::bpf_insn&gt;();</pre>
+                <pre class="has-background-danger-light py-0 px-2">    fn clone(&amp;self) -&gt; Self {</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22771,7 +22771,7 @@
             </div>
             <div class="column has-background-danger-light p-0"
                  role="cell">
-                <pre class="has-background-danger-light py-0 px-2">        let storage = unsafe {</pre>
+                <pre class="has-background-danger-light py-0 px-2">        let len = self.0.bf_len as usize;</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22787,7 +22787,7 @@
             </div>
             <div class="column has-background-danger-light p-0"
                  role="cell">
-                <pre class="has-background-danger-light py-0 px-2">            let storage = libc::malloc(size) as *mut raw::bpf_insn;</pre>
+                <pre class="has-background-danger-light py-0 px-2">        let size = len * mem::size_of::&lt;raw::bpf_insn&gt;();</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22803,7 +22803,7 @@
             </div>
             <div class="column has-background-danger-light p-0"
                  role="cell">
-                <pre class="has-background-danger-light py-0 px-2">            ptr::copy_nonoverlapping(self.0.bf_insns, storage, len);</pre>
+                <pre class="has-background-danger-light py-0 px-2">        let storage = unsafe {</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22819,7 +22819,7 @@
             </div>
             <div class="column has-background-danger-light p-0"
                  role="cell">
-                <pre class="has-background-danger-light py-0 px-2">            storage</pre>
+                <pre class="has-background-danger-light py-0 px-2">            let storage = libc::malloc(size) as *mut raw::bpf_insn;</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22835,7 +22835,7 @@
             </div>
             <div class="column has-background-danger-light p-0"
                  role="cell">
-                <pre class="has-background-danger-light py-0 px-2">        };</pre>
+                <pre class="has-background-danger-light py-0 px-2">            ptr::copy_nonoverlapping(self.0.bf_insns, storage, len);</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22851,7 +22851,7 @@
             </div>
             <div class="column has-background-danger-light p-0"
                  role="cell">
-                <pre class="has-background-danger-light py-0 px-2">        BpfProgram(raw::bpf_program {</pre>
+                <pre class="has-background-danger-light py-0 px-2">            storage</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22867,7 +22867,7 @@
             </div>
             <div class="column has-background-danger-light p-0"
                  role="cell">
-                <pre class="has-background-danger-light py-0 px-2">            bf_len: self.0.bf_len,</pre>
+                <pre class="has-background-danger-light py-0 px-2">        };</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22883,7 +22883,7 @@
             </div>
             <div class="column has-background-danger-light p-0"
                  role="cell">
-                <pre class="has-background-danger-light py-0 px-2">            bf_insns: storage,</pre>
+                <pre class="has-background-danger-light py-0 px-2">        BpfProgram(raw::bpf_program {</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22899,7 +22899,7 @@
             </div>
             <div class="column has-background-danger-light p-0"
                  role="cell">
-                <pre class="has-background-danger-light py-0 px-2">        })</pre>
+                <pre class="has-background-danger-light py-0 px-2">            bf_len: self.0.bf_len,</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22915,7 +22915,7 @@
             </div>
             <div class="column has-background-danger-light p-0"
                  role="cell">
-                <pre class="has-background-danger-light py-0 px-2">    }</pre>
+                <pre class="has-background-danger-light py-0 px-2">            bf_insns: storage,</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22925,13 +22925,13 @@
                 <a href="#1431">1431</a>
             </div>
             <div
-                class="column is-1 is-narrow p-0 has-text-centered has-text-white has-background-white"
-                role="cell" aria-label="no coverage">
+                class="column is-1 is-narrow p-0 has-text-centered has-text-danger-light has-background-danger"
+                role="cell" aria-label="0">
                 
             </div>
-            <div class="column has-background-white p-0"
+            <div class="column has-background-danger-light p-0"
                  role="cell">
-                <pre class="has-background-white py-0 px-2">}</pre>
+                <pre class="has-background-danger-light py-0 px-2">        })</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22941,13 +22941,13 @@
                 <a href="#1432">1432</a>
             </div>
             <div
-                class="column is-1 is-narrow p-0 has-text-centered has-text-white has-background-white"
-                role="cell" aria-label="no coverage">
+                class="column is-1 is-narrow p-0 has-text-centered has-text-danger-light has-background-danger"
+                role="cell" aria-label="0">
                 
             </div>
-            <div class="column has-background-white p-0"
+            <div class="column has-background-danger-light p-0"
                  role="cell">
-                <pre class="has-background-white py-0 px-2"></pre>
+                <pre class="has-background-danger-light py-0 px-2">    }</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22963,7 +22963,7 @@
             </div>
             <div class="column has-background-white p-0"
                  role="cell">
-                <pre class="has-background-white py-0 px-2">impl Drop for BpfProgram {</pre>
+                <pre class="has-background-white py-0 px-2">}</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22973,13 +22973,13 @@
                 <a href="#1434">1434</a>
             </div>
             <div
-                class="column is-1 is-narrow p-0 has-text-centered has-text-success-light has-background-success"
-                role="cell" aria-label="76">
-                76
+                class="column is-1 is-narrow p-0 has-text-centered has-text-white has-background-white"
+                role="cell" aria-label="no coverage">
+                
             </div>
-            <div class="column has-background-success-light p-0"
+            <div class="column has-background-white p-0"
                  role="cell">
-                <pre class="has-background-success-light py-0 px-2">    fn drop(&amp;mut self) {</pre>
+                <pre class="has-background-white py-0 px-2"></pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -22989,13 +22989,13 @@
                 <a href="#1435">1435</a>
             </div>
             <div
-                class="column is-1 is-narrow p-0 has-text-centered has-text-success-light has-background-success"
-                role="cell" aria-label="76">
-                76
+                class="column is-1 is-narrow p-0 has-text-centered has-text-white has-background-white"
+                role="cell" aria-label="no coverage">
+                
             </div>
-            <div class="column has-background-success-light p-0"
+            <div class="column has-background-white p-0"
                  role="cell">
-                <pre class="has-background-success-light py-0 px-2">        unsafe { raw::pcap_freecode(&amp;mut self.0) }</pre>
+                <pre class="has-background-white py-0 px-2">impl Drop for BpfProgram {</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -23011,7 +23011,7 @@
             </div>
             <div class="column has-background-success-light p-0"
                  role="cell">
-                <pre class="has-background-success-light py-0 px-2">    }</pre>
+                <pre class="has-background-success-light py-0 px-2">    fn drop(&amp;mut self) {</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -23021,13 +23021,13 @@
                 <a href="#1437">1437</a>
             </div>
             <div
-                class="column is-1 is-narrow p-0 has-text-centered has-text-white has-background-white"
-                role="cell" aria-label="no coverage">
-                
+                class="column is-1 is-narrow p-0 has-text-centered has-text-success-light has-background-success"
+                role="cell" aria-label="76">
+                76
             </div>
-            <div class="column has-background-white p-0"
+            <div class="column has-background-success-light p-0"
                  role="cell">
-                <pre class="has-background-white py-0 px-2">}</pre>
+                <pre class="has-background-success-light py-0 px-2">        unsafe { raw::pcap_freecode(&amp;mut self.0) }</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -23037,13 +23037,13 @@
                 <a href="#1438">1438</a>
             </div>
             <div
-                class="column is-1 is-narrow p-0 has-text-centered has-text-white has-background-white"
-                role="cell" aria-label="no coverage">
-                
+                class="column is-1 is-narrow p-0 has-text-centered has-text-success-light has-background-success"
+                role="cell" aria-label="76">
+                76
             </div>
-            <div class="column has-background-white p-0"
+            <div class="column has-background-success-light p-0"
                  role="cell">
-                <pre class="has-background-white py-0 px-2"></pre>
+                <pre class="has-background-success-light py-0 px-2">    }</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -23059,7 +23059,7 @@
             </div>
             <div class="column has-background-white p-0"
                  role="cell">
-                <pre class="has-background-white py-0 px-2">impl fmt::Display for BpfInstruction {</pre>
+                <pre class="has-background-white py-0 px-2">}</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -23069,13 +23069,13 @@
                 <a href="#1440">1440</a>
             </div>
             <div
-                class="column is-1 is-narrow p-0 has-text-centered has-text-danger-light has-background-danger"
-                role="cell" aria-label="0">
+                class="column is-1 is-narrow p-0 has-text-centered has-text-white has-background-white"
+                role="cell" aria-label="no coverage">
                 
             </div>
-            <div class="column has-background-danger-light p-0"
+            <div class="column has-background-white p-0"
                  role="cell">
-                <pre class="has-background-danger-light py-0 px-2">    fn fmt(&amp;self, f: &amp;mut fmt::Formatter&lt;&#x27;_&gt;) -&gt; fmt::Result {</pre>
+                <pre class="has-background-white py-0 px-2"></pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -23085,13 +23085,13 @@
                 <a href="#1441">1441</a>
             </div>
             <div
-                class="column is-1 is-narrow p-0 has-text-centered has-text-danger-light has-background-danger"
-                role="cell" aria-label="0">
+                class="column is-1 is-narrow p-0 has-text-centered has-text-white has-background-white"
+                role="cell" aria-label="no coverage">
                 
             </div>
-            <div class="column has-background-danger-light p-0"
+            <div class="column has-background-white p-0"
                  role="cell">
-                <pre class="has-background-danger-light py-0 px-2">        write!(</pre>
+                <pre class="has-background-white py-0 px-2">impl fmt::Display for BpfInstruction {</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -23107,7 +23107,7 @@
             </div>
             <div class="column has-background-danger-light p-0"
                  role="cell">
-                <pre class="has-background-danger-light py-0 px-2">            f,</pre>
+                <pre class="has-background-danger-light py-0 px-2">    fn fmt(&amp;self, f: &amp;mut fmt::Formatter&lt;&#x27;_&gt;) -&gt; fmt::Result {</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -23123,7 +23123,7 @@
             </div>
             <div class="column has-background-danger-light p-0"
                  role="cell">
-                <pre class="has-background-danger-light py-0 px-2">            &quot;{} {} {} {}&quot;,</pre>
+                <pre class="has-background-danger-light py-0 px-2">        write!(</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -23139,7 +23139,7 @@
             </div>
             <div class="column has-background-danger-light p-0"
                  role="cell">
-                <pre class="has-background-danger-light py-0 px-2">            self.0.code, self.0.jt, self.0.jf, self.0.k</pre>
+                <pre class="has-background-danger-light py-0 px-2">            f,</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -23155,7 +23155,7 @@
             </div>
             <div class="column has-background-danger-light p-0"
                  role="cell">
-                <pre class="has-background-danger-light py-0 px-2">        )</pre>
+                <pre class="has-background-danger-light py-0 px-2">            &quot;{} {} {} {}&quot;,</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -23171,7 +23171,7 @@
             </div>
             <div class="column has-background-danger-light p-0"
                  role="cell">
-                <pre class="has-background-danger-light py-0 px-2">    }</pre>
+                <pre class="has-background-danger-light py-0 px-2">            self.0.code, self.0.jt, self.0.jf, self.0.k</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -23181,13 +23181,13 @@
                 <a href="#1447">1447</a>
             </div>
             <div
-                class="column is-1 is-narrow p-0 has-text-centered has-text-white has-background-white"
-                role="cell" aria-label="no coverage">
+                class="column is-1 is-narrow p-0 has-text-centered has-text-danger-light has-background-danger"
+                role="cell" aria-label="0">
                 
             </div>
-            <div class="column has-background-white p-0"
+            <div class="column has-background-danger-light p-0"
                  role="cell">
-                <pre class="has-background-white py-0 px-2">}</pre>
+                <pre class="has-background-danger-light py-0 px-2">        )</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -23197,13 +23197,13 @@
                 <a href="#1448">1448</a>
             </div>
             <div
-                class="column is-1 is-narrow p-0 has-text-centered has-text-white has-background-white"
-                role="cell" aria-label="no coverage">
+                class="column is-1 is-narrow p-0 has-text-centered has-text-danger-light has-background-danger"
+                role="cell" aria-label="0">
                 
             </div>
-            <div class="column has-background-white p-0"
+            <div class="column has-background-danger-light p-0"
                  role="cell">
-                <pre class="has-background-white py-0 px-2"></pre>
+                <pre class="has-background-danger-light py-0 px-2">    }</pre>
             </div>
         </div><div class="columns p-0 m-0" role="row">
             <div
@@ -23219,13 +23219,45 @@
             </div>
             <div class="column has-background-white p-0"
                  role="cell">
+                <pre class="has-background-white py-0 px-2">}</pre>
+            </div>
+        </div><div class="columns p-0 m-0" role="row">
+            <div
+                class="column is-1 is-narrow p-0 has-text-centered"
+                id="1450"
+                role="cell">
+                <a href="#1450">1450</a>
+            </div>
+            <div
+                class="column is-1 is-narrow p-0 has-text-centered has-text-white has-background-white"
+                role="cell" aria-label="no coverage">
+                
+            </div>
+            <div class="column has-background-white p-0"
+                 role="cell">
+                <pre class="has-background-white py-0 px-2"></pre>
+            </div>
+        </div><div class="columns p-0 m-0" role="row">
+            <div
+                class="column is-1 is-narrow p-0 has-text-centered"
+                id="1451"
+                role="cell">
+                <a href="#1451">1451</a>
+            </div>
+            <div
+                class="column is-1 is-narrow p-0 has-text-centered has-text-white has-background-white"
+                role="cell" aria-label="no coverage">
+                
+            </div>
+            <div class="column has-background-white p-0"
+                 role="cell">
                 <pre class="has-background-white py-0 px-2">unsafe impl Send for BpfProgram {}</pre>
             </div>
         </div></div>
 </div>
         <footer class="footer">
             <div class="content has-text-centered">
-                <p class="heading">Date: 2022-08-14 10:06</p>
+                <p class="heading">Date: 2022-08-14 10:08</p>
             </div>
         </footer>
     </body>
